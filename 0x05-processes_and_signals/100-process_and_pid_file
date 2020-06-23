@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Project: Processes and signals
+# Why you no love me?
+sudo touch /var/run/holbertonscript.pid
+echo $$ > /var/run/holbertonscript.pid
+trap "echo 'I hate the kill command'; sudo rm /var/run/holbertonscript.pid; exit" SIGTERM
+trap "echo Y U no love me?!" SIGINT
+trap "sudo rm /var/run/holbertonscript.pid; exit" SIGQUIT
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
