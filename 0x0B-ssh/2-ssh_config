@@ -1,0 +1,4 @@
+# Client configuration file 
+Host 34.75.237.146
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/holberton
