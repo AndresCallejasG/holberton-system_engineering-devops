@@ -3,6 +3,6 @@
 apt-get update
 apt-get -y install nginx
 service nginx start
-echo "Holberton School" > /var/www/html/index.html
-sed -i "/server_name _;/a \\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\terror_page 404 /custom_404.html;\n" /etc/nginx/sites-available/default
+echo "Holberton School" > /var/www/html/    index.html
+sed -i "/server_name _;/a \\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\terror_page 404 /custom_404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html\/;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default
 service nginx restart
