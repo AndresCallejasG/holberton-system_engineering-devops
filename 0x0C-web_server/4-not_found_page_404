@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Install nginx web server - basic config
+# Install nginx web server - basic config - redirect and 404
 apt-get update
 apt-get -y install nginx
 service nginx start
