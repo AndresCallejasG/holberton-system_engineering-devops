@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 # Web stack debugging #1
-sed -i "s/listen 8080/listen 80/g" /etc/nginx/sites-enabled/default
-sed -i "s/listen \[::\]:8080 /listen [::]:80/g" /etc/nginx/sites-enabled/default
+sed -i "s/8080/80/g" /etc/nginx/sites-enabled/default
 service nginx restart
