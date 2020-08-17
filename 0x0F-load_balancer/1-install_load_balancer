@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Install and configure load balancer
+
+apt-get install  -y software-properties-common
+add-apt-repository -y ppa:vbernat/haproxy-2.0
+apt-get update
+apt-get install -y haproxy=2.0.\*
+
+echo "frontend Airbnb_front
+	    bind *:80
+        mode http
+        default_backend Airbnb_back
+    backend Airbnb_back
+        balance roundrobin
+        server 1474-web-01 34.75.237.146:80 check
+        server 1474-web-02 35.196.182.11:80 check
+    " >> /etc/haproxy/haproxy.cfg
+service haproxy restart
