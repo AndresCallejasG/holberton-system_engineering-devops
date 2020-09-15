@@ -2,9 +2,9 @@
 """ using a REST API, for a given employee ID, returns information
     about his/her TO-DO list progress in a CSV
 """
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     """ script
