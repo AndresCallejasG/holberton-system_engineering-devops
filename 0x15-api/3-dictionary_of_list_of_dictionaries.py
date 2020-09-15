@@ -22,7 +22,6 @@ if __name__ == "__main__":
                     'completed': elem.get('completed'),
                     'username': usr.get('username')
                 }
-                print("yes")
                 tasks_list.append(data)
         json_str.update({str(id): tasks_list})
     json_file = "todo_all_employees.json"
