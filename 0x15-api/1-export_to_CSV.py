@@ -18,8 +18,9 @@ if __name__ == "__main__":
 
     csv_file = "{}.csv".format(id)
     with open(csv_file, mode='w') as user_file:
-        user_writer = csv.writer(user_file, delimiter=',',
-                            quotechar='"', quoting=csv.QUOTE_ALL)
+        user_writer = csv.writer(
+            user_file, delimiter=',',
+            quotechar='"', quoting=csv.QUOTE_ALL)
 
         for elem in tasks:
             user_writer.writerow((id, user_data.get(
