@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """ using a REST API, for a given employee ID, returns information
     about his/her TO-DO list progress in a json
 """
