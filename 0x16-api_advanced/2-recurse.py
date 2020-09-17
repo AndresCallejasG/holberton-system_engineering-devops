@@ -17,7 +17,7 @@ def recurse(subreddit, hot_list=[], after=None):
         posts = data['data']['children']
     except KeyError:
         print("None")
-        return
+        return None
 
     for post in posts:
         hot_list.append(post['data']['title'])
